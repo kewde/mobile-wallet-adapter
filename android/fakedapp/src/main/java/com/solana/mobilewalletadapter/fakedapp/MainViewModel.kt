@@ -234,9 +234,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         var authorized = false
         try {
             val result = client.authorize(
-                Uri.parse("https://solana.com"),
-                Uri.parse("favicon.ico"),
-                "Solana",
+                null,
+                null,
+                null,
                 ProtocolContract.CLUSTER_TESTNET
             ).get()
             Log.d(TAG, "Authorized: $result")
@@ -283,9 +283,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         var reauthorized = false
         try {
             val result = client.reauthorize(
-                Uri.parse("https://solana.com"),
-                Uri.parse("favicon.ico"),
-                "Solana",
+                null,
+                null,
+                null,
                 _uiState.value.authToken!!
             ).get()
             Log.d(TAG, "Reauthorized: $result")
